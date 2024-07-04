@@ -1,16 +1,24 @@
-# This is a sample Python script.
+from BinaryHeap import Heap
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+data = [47,57,23,43,31,29,17]
 
+print("\nMaximum Heap Tree")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+heap_tree = Heap(len(data))
+heap_tree.create_heap_tree(data)
+heap_tree.print_heap()
+sorted  = heap_tree.descending_order()
+print("\nDescending order")
+heap_tree.print_list(sorted)
 
+print("\n\nMinimum Heap Tree")
+min_heap = Heap(len(data))
+min_heap.create_min_heap(data)
+min_heap.print_heap()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print("\nAscending order")
+asc = min_heap.ascending_order()
+min_heap.print_list(asc)
+min_heap.delete_node_min(2)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# ©Zairul Mazwan©
