@@ -22,7 +22,7 @@ class Heap:
         res = (2*index) + 2
         return res
 
-    def insert(self, value):
+    def insert_max(self, value):
         if self.size >= self.MAX_SIZE:
             print(f"The binary heap tree is full!, {value} cannot be inserted.")
             return
@@ -120,7 +120,7 @@ class Heap:
 
     def create_max_heap(self, data):
         for i in data:
-            self.insert(i)
+            self.insert_max(i)
 
 
     def create_min_heap(self,data):
